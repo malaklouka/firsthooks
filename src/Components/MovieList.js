@@ -1,14 +1,14 @@
-import React from 'react';
-import MovieCard from './MovieCard.js';
-const MovieList =(props)=>{
-    return (
+import React from 'react'
+import MovieCard from './MovieCard.js'
+import { Link } from 'react-router-dom';
+
+const MovieList = (props) => {
+	return (
 		<>
-			{props.movies.map((movie) =>(
-				<MovieCard movie={movie} />
+			{props.movies.map((movie) => (<Link to={`/trailer/${movie.id}`}>
+				<MovieCard movie={movie} /></Link>
 			))}
 		</>
 	);
 };
-
-
 export default MovieList;

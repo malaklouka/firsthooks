@@ -39,12 +39,13 @@ const AddMovie = ({ handleAddMovie }) => {
 
     return (
         <>
-            <button type="button" class="btn" onClick={handleShow}>New movie</button>
-            <Modal style={{ backgroundColor: 'rgb(204, 153, 193)' }} show={show} onHide={handleClose} animation={false} >
-                <Modal.Header >
+            <button type="button" class="btn2" onClick={handleShow}>New movie</button>
+            <Modal style={{ backgroundColor: 'black' }} show={show} onHide={handleClose} animation={false} >
+               <div className='mod'> <Modal.Header style={{ backgroundColor: '#8B0000' }} >
                     <Modal.Title> New Movie </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                </div>
+                <Modal.Body style={{ backgroundColor: '#8B0000' }}>
                     <Form onSubmit={mySubmitHandler}>
                         <Form.Control type="text" name="id" placeholder="ID" onChange={handleChange} required />
                         <Form.Control type="text" name="title" placeholder="Title" onChange={handleChange} required />
@@ -53,8 +54,8 @@ const AddMovie = ({ handleAddMovie }) => {
                         <Form.Control type="number" name="rate" placeholder="Rate" onChange={handleChange} required />
                     </Form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" type='submit' onClick={mySubmitHandler}>Save Changes</Button>
+                <Modal.Footer style={{ backgroundColor: '#8B0000' }}>
+                    <Button style={{ backgroundColor:'black' }}variant="primary" type='submit' onClick={mySubmitHandler}>Save Changes</Button>
                     <Button variant="secondary" onClick={handleClose}>Close</Button>
                 </Modal.Footer>
             </Modal>
